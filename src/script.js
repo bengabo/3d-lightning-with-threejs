@@ -272,15 +272,12 @@ directLight03.position.y = -10;
 directLight03.position.z = 15;
 
 const lightsAndLightningGroup = new Group();
-lightsAndLightningGroup.add(
-  directLight01,
-  directLight02,
-  directLight03,
-  lightningObject
-);
+lightsAndLightningGroup.add(directLight01, directLight02, directLight03);
 scene.add(lightsAndLightningGroup);
 
-// Renderer
+/**
+ * Renderer
+ */
 const renderer = new WebGLRenderer({
   antialias: true,
   alpha: true,
@@ -303,6 +300,7 @@ const clock = new Clock();
 
 const tick = () => {
   const time = clock.getElapsedTime();
+
   lightningsGroup.rotation.y = time * 0.01;
   renderer.render(scene, camera);
   controls.update();
