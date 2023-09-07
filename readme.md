@@ -1,6 +1,6 @@
 # 3D lightning with Three.js
 
-## Setup
+## https://dapper-raindrop-2b5094.netlify.app
 
 Download [Node.js](https://nodejs.org/en/download/).
 Run this followed commands:
